@@ -16,6 +16,11 @@ Route::get('/', function () {
     return view('welcome', compact('name'));
 });
 
+Route::get('/coding', function () {
+    $names = ['zak', 'hugo', 'elias', 'albi'];
+    return view('coding', compact('names'));
+});
+
 // Route::get('/{name?}/{lastname?}/{age?}', function ($name = 'Elias', $lastname = 'Aboutaharan', $age = 23) {
 //     return "<h1>Salut, je suis " .$name." ".$lastname. " et j'ai ".$age." ans</h1>";
 // })->where([
