@@ -11,17 +11,18 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    $name = "Hello";
+    return view('welcome', compact('name'));
+});
 
-Route::get('/{name?}/{lastname?}/{age?}', function ($name = 'Elias', $lastname = 'Aboutaharan', $age = 23) {
-    return "<h1>Salut, je suis " .$name." ".$lastname. " et j'ai ".$age." ans</h1>";
-})->where([
-    'name' => '[a-zA-Z]+',
-    'lastname' => '[a-zA-Z]+',
-    'age' => '[0-9]{0,2}'
-]); 
+// Route::get('/{name?}/{lastname?}/{age?}', function ($name = 'Elias', $lastname = 'Aboutaharan', $age = 23) {
+//     return "<h1>Salut, je suis " .$name." ".$lastname. " et j'ai ".$age." ans</h1>";
+// })->where([
+//     'name' => '[a-zA-Z]+',
+//     'lastname' => '[a-zA-Z]+',
+//     'age' => '[0-9]{0,2}'
+// ]); 
 
 Auth::routes();
 
